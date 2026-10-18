@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Guides | AgriHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🌱 AgriHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="guides.html">Farming Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crops.html">Crop Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pest-control.html">Pest Control</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="text-warning fw-bold">LEARN • PRACTICE • IMPROVE</p>
+            <h1 class="display-4 fw-bold">Farming Guides</h1>
+            <p class="lead">Practical tutorials to help you make informed farming decisions.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="filter-panel mb-4">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="cropFilter" class="form-label">Crop Type</label>
+                        <select id="cropFilter" class="form-select">
+                            <option value="all">All Crops</option>
+                            <option value="rice">Rice</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="wheat">Wheat</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="seasonFilter" class="form-label">Season</label>
+                        <select id="seasonFilter" class="form-select">
+                            <option value="all">All Seasons</option>
+                            <option value="summer">Summer / Kharif</option>
+                            <option value="winter">Winter / Rabi</option>
+                            <option value="year-round">Year-round</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="methodFilter" class="form-label">Farming Method</label>
+                        <select id="methodFilter" class="form-select">
+                            <option value="all">All Methods</option>
+                            <option value="traditional">Traditional</option>
+                            <option value="organic">Organic</option>
+                            <option value="modern">Modern</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <p id="guideCount" class="text-muted mb-4" aria-live="polite"></p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="rice" data-season="summer" data-method="modern">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1536630596251-b9f762d5c2b0?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Rice cultivation">
+                        <div class="card-body">
+                            <span class="badge bg-success">Rice • Kharif</span>
+                            <h4 class="mt-3">Rice Cultivation Guide</h4>
+                            <p>Understand seed selection, nursery preparation, transplanting and water management.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Select a suitable variety for the local season.</li>
+                                <li>Prepare a level field and healthy seedlings.</li>
+                                <li>Transplant at the recommended spacing.</li>
+                                <li>Manage water and nutrients based on crop stage.</li>
+                                <li>Monitor pests and harvest at maturity.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Follow local agricultural extension recommendations for
+                                variety and planting dates.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="wheat" data-season="winter" data-method="modern">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Wheat field">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark">Wheat • Rabi</span>
+                            <h4 class="mt-3">Wheat Production</h4>
+                            <p>Learn about seedbed preparation, sowing, nutrient management and harvesting.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Choose an adapted, quality seed variety.</li>
+                                <li>Prepare a fine, well-drained seedbed.</li>
+                                <li>Sow at the recommended depth and spacing.</li>
+                                <li>Manage irrigation and fertilizer according to soil tests.</li>
+                                <li>Harvest when grain reaches suitable maturity.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Avoid waterlogging and use locally recommended sowing
+                                dates.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="vegetables" data-season="winter"
+                    data-method="organic">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Fresh vegetable crops">
+                        <div class="card-body">
+                            <span class="badge bg-success">Vegetables • Organic</span>
+                            <h4 class="mt-3">Organic Vegetable Farming</h4>
+                            <p>Build healthy soil and reduce unnecessary chemical inputs.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Select crops suited to the climate and season.</li>
+                                <li>Add mature compost based on soil needs.</li>
+                                <li>Use healthy seeds and appropriate spacing.</li>
+                                <li>Apply mulch and efficient irrigation.</li>
+                                <li>Scout for pests and use IPM methods.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Use only approved inputs and properly composted organic
+                                matter.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="fruits" data-season="year-round"
+                    data-method="traditional">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Fresh fruit harvest">
+                        <div class="card-body">
+                            <span class="badge bg-success">Fruits • Orchard</span>
+                            <h4 class="mt-3">Fruit Tree Management</h4>
+                            <p>Learn how to establish and maintain productive fruit trees.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Choose healthy planting material.</li>
+                                <li>Prepare a suitable planting location and pit.</li>
+                                <li>Plant at the locally recommended spacing.</li>
+                                <li>Prune appropriately and monitor nutrition.</li>
+                                <li>Harvest carefully at the right maturity.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Pruning and planting times depend on the fruit species.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="vegetables" data-season="summer"
+                    data-method="modern">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Crop field">
+                        <div class="card-body">
+                            <span class="badge bg-primary">Irrigation • Modern</span>
+                            <h4 class="mt-3">Efficient Water Management</h4>
+                            <p>Use water wisely while meeting the needs of growing crops.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Check soil moisture before irrigation.</li>
+                                <li>Understand crop water requirements.</li>
+                                <li>Repair leaks and maintain irrigation equipment.</li>
+                                <li>Water at appropriate times.</li>
+                                <li>Check for drainage and waterlogging.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Irrigation needs vary with soil, weather and crop stage.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 guide-item" data-crop="rice" data-season="summer"
+                    data-method="traditional">
+                    <article class="card custom-card h-100">
+                        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=700&q=80"
+                            class="card-img-top" alt="Farm field preparation">
+                        <div class="card-body">
+                            <span class="badge bg-success">Soil • Traditional</span>
+                            <h4 class="mt-3">Soil Preparation</h4>
+                            <p>Prepare productive soil while protecting its long-term structure.</p>
+                            <h6>Steps to follow</h6>
+                            <ol>
+                                <li>Inspect the field and test the soil.</li>
+                                <li>Remove problematic weeds appropriately.</li>
+                                <li>Improve drainage where needed.</li>
+                                <li>Incorporate suitable organic matter.</li>
+                                <li>Prepare the seedbed without excessive tillage.</li>
+                            </ol>
+                            <p class="small text-muted">Tip: Soil tests help avoid unnecessary fertilizer use.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="noGuides" class="alert alert-info mt-4 d-none">No guides match these filters. Try another
+                combination.</div>
+        </div>
+    </section>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <p class="mb-0">© <span class="current-year"></span> Agricultural Information Hub</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
